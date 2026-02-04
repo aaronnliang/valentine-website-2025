@@ -60,4 +60,11 @@ const CONFIG = {
   music: {
     enabled: true,
     autoplay: true,
-    musicUrl: "https://res.cloudinary.com/dojfyeck0/video/upload/v1770189203/Daniel_Cae_
+    musicUrl: "https://res.cloudinary.com/dojfyeck0/video/upload/v1770189203/Daniel_Caesar_-_Toronto_2014_Official_Audio_gvj9za.mp3",
+    startText: "🎵 Play Music",
+    stopText: "🔇 Stop Music",
+    volume: 0.5
+  }
+};
+
+window.VALENTINE_CONFIG = CONFIG;
