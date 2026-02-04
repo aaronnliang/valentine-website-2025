@@ -1,26 +1,25 @@
-// Update CSS variables from configuration
 function applyTheme() {
-    const config = window.VALENTINE_CONFIG;
-    if (!config || !config.colors || !config.animations) {
-        console.warn("VALENTINE_CONFIG missing or incomplete. Theme not applied.");
-        return;
-    }
+  const config = window.VALENTINE_CONFIG;
 
-    const root = document.documentElement;
+  if (!config || !config.colors || !config.animations) {
+    console.warn("VALENTINE_CONFIG missing or incomplete. Theme not applied.");
+    return;
+  }
 
-    // Apply colors
-    root.style.setProperty('--background-color-1', config.colors.backgroundStart);
-    root.style.setProperty('--background-color-2', config.colors.backgroundEnd);
-    root.style.setProperty('--button-color', config.colors.buttonBackground);
-    root.style.setProperty('--button-hover', config.colors.buttonHover);
-    root.style.setProperty('--text-color', config.colors.textColor);
+  const root = document.documentElement;
 
-    // Apply animation settings
-    root.style.setProperty('--float-duration', config.animations.floatDuration);
-    root.style.setProperty('--float-distance', config.animations.floatDistance);
-    root.style.setProperty('--bounce-speed', config.animations.bounceSpeed);
-    root.style.setProperty('--heart-explosion-size', config.animations.heartExplosionSize);
+  // Colors
+  root.style.setProperty("--background-color-1", config.colors.backgroundStart);
+  root.style.setProperty("--background-color-2", config.colors.backgroundEnd);
+  root.style.setProperty("--button-color", config.colors.buttonBackground);
+  root.style.setProperty("--button-hover", config.colors.buttonHover);
+  root.style.setProperty("--text-color", config.colors.textColor);
+
+  // Animations
+  root.style.setProperty("--float-duration", config.animations.floatDuration);
+  root.style.setProperty("--float-distance", config.animations.floatDistance);
+  root.style.setProperty("--bounce-speed", config.animations.bounceSpeed);
+  root.style.setProperty("--heart-explosion-size", config.animations.heartExplosionSize);
 }
 
-// Apply theme when the page loads
-window.addEventListener('DOMContentLoaded', applyTheme);
+window.addEventListener("DOMContentLoaded", applyTheme);
