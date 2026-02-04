@@ -1,6 +1,11 @@
 // Update CSS variables from configuration
 function applyTheme() {
     const config = window.VALENTINE_CONFIG;
+    if (!config || !config.colors || !config.animations) {
+        console.warn("VALENTINE_CONFIG missing or incomplete. Theme not applied.");
+        return;
+    }
+
     const root = document.documentElement;
 
     // Apply colors
@@ -18,4 +23,4 @@ function applyTheme() {
 }
 
 // Apply theme when the page loads
-window.addEventListener('DOMContentLoaded', applyTheme); 
+window.addEventListener('DOMContentLoaded', applyTheme);
